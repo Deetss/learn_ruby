@@ -29,20 +29,17 @@ def power num1, num2
   num1 ** num2
 
 end
-#def factorial num
-  #if num != 0
-    #while num > 0
-      #if num == 1
-        #total = num * (num)
-        #num -= 1
-      #else
-        #total = num * (num -1)
-        #num -= 1
-      #end
 
-    #end
-  #else
-    #total = 1
-  #end
-  #total
-#end
+def factorial num
+  total = 1
+  if (num-1)* num == 0
+    total
+  else
+    while num > 0
+        total = total * (num)
+        num -= 1
+      end
+    end
+
+  total
+end
