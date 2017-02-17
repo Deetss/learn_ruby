@@ -68,5 +68,9 @@ describe "#translate" do
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
+  it "asserts that capitalized words are capitalized" do
+     s= translate("This string has Some capitalization")
+     expect(s).to eq("Isthay ingstray ashay Omesay apitalizationcay")
+  end
 
 end
