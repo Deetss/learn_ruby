@@ -30,13 +30,18 @@ def first_word input
 end
 
 def titleize input
-  little_words = ['a', 'an', 'the','for', 'and', 'nor','but', 'or', 'yet', 'so']
-  words = input.split.map(&:capitalize)
-
-  for each in words
-    if little_words.include?(each)
-      each.downcase
+  little_words = ['a', 'an', 'the','for', 'and', 'nor','but', 'or', 'yet', 'so','over']
+  words = input.split(" ")
+  if words.length < 2
+    words[0].capitalize
+  else
+    for each in words
+      if little_words.include?(each) and each != words[0]
+        each.downcase!
+      else
+        each.capitalize!
+      end
     end
+    words = words.join(" ")
   end
-  words = words.join(" ")
 end
