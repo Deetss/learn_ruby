@@ -32,6 +32,7 @@ end
 def titleize input
   little_words = ['a', 'an', 'the','for', 'and', 'nor','but', 'or', 'yet', 'so','over']
   words = input.split(" ")
+  
   if words.length < 2
     words[0].capitalize
   else
